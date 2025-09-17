@@ -1,0 +1,38 @@
+service: simple-lambda-app
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: us-east-1
+  timeout: 29
+  memorySize: 1024
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+iam:
+  role:
+    statements:
+      - Effect: "Allow"
+        Action: "*"
+        Resource: "*"
+
+plugins:
+  - serverless-python-requirements
+
+
+custom:
+  pythonRequirements:
+    pythonBin: "./.venv/Scripts/python.exe"
+    dockerizePip: false
+    slim: true
+
+package:
+  include:
+    - handler.py
+

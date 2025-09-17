@@ -1,0 +1,22 @@
+# Ignore all .env files in all directories
+**/.env
+
+# Ignore all venv and .venv directories in all directories
+**/venv/
+**/.venv/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+admin_accessKeys.csv
+admin_credentials.csv
+AWS Credentials.xlsx
+**node_modules/
