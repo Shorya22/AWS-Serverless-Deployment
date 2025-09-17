@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+AWS Credentials.xlsx
+admin_credentials.xlsx
+admin_accessKeys.xlsx
+
 # Distribution / packaging
 .Python
 build/
